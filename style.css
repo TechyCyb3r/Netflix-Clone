@@ -1,0 +1,577 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+header {
+    background-image: url("./assets/img/background.jpg");
+    height: 95vh;
+    width: 100%;
+    background-size: cover;
+    background-position-y: -21.2px;
+    position: relative;
+}
+
+header .box {
+    height: 95vh;
+    width: 100%;
+    background: #000000;
+    background: linear-gradient(180deg,
+            rgba(0, 0, 0, 0.905) 0%,
+            rgba(0, 0, 0, 0.578) 50%,
+            rgba(0, 0, 0, 0.852) 100%);
+    position: absolute;
+}
+
+.navbar {
+    display: flex;
+    position: relative;
+    max-width: 80vw;
+    margin: 0px 100px 0px 100px;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+
+
+.btn {
+    border: 1px solid rgb(87, 87, 87);
+    border-radius: 4px;
+    background-color: rgba(2, 2, 2, 0.288);
+    color: white;
+    width: 120px;
+    height: 30px;
+    padding: 8px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.btn-sign {
+    border: none;
+    border-radius: 4px;
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    width: 80px;
+    cursor: pointer;
+}
+
+.content {
+    height: 600px;
+    position: relative;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    width: 50vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.headings {
+    height: 220px;
+}
+
+
+
+.content h1 {
+    font-size: 4rem;
+    font-weight: bolder;
+}
+
+
+
+
+.content p {
+    font-size: 20px;
+}
+
+.emailbox {
+    color: white;
+    text-align: center;
+}
+
+.emailbox p {
+    font-size: 1.2rem
+}
+
+.emailbox input {
+    border: 1px solid rgb(87, 87, 87);
+    border-radius: 5px;
+    background-color: rgba(2, 2, 2, 0.288);
+    color: white;
+    width: 500px;
+    height: 60px;
+    padding: 10px;
+    font-size: 22px;
+    align-items: center;
+}
+
+.stButton {
+    border: none;
+    border-radius: 4px;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    width: 180px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.stButton img {
+    width: 10px;
+    margin: -5px 20px;
+}
+
+
+
+/* Trending Now */
+.container {
+    width: 87vw;
+    margin: auto;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.slider {
+    height: 320px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    padding: 10px 0;
+    scrollbar-color: #e50914 #111;
+    /* thumb | track */
+    scrollbar-width: thin;
+}
+
+.slider::-webkit-scrollbar {
+    height: 10px;
+}
+
+.slider::-webkit-scrollbar-track {
+    background: rgba(20, 20, 20, 0.8);
+    border-radius: 10px;
+}
+
+.slider::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border-radius: 10px;
+    border: 2px solid #111;
+    transition: background 0.3s ease;
+}
+
+.slider::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(90deg, #e50914, #b82869);
+}
+
+
+.trending {
+    display: flex;
+    list-style: none;
+    counter-reset: rank;
+}
+
+.trending li {
+    position: relative;
+    counter-increment: rank;
+    flex: 0 0 auto;
+    margin: 0px 30px;
+}
+
+.trending li img {
+    width: 200px;
+    display: block;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.trending li img:hover {
+    transform: scale(1.08);
+}
+
+.trending li::before {
+    content: counter(rank);
+    position: absolute;
+    font-size: 80px;
+    font-weight: 800;
+    color: transparent;
+    -webkit-text-stroke: 3px white;
+    left: -15px;
+    bottom: 10px;
+    z-index: 1;
+}
+
+/* More About Reason */
+
+.reason {
+    width: 90vw;
+    min-height: auto;
+    margin: auto;
+    padding: 40px;
+}
+
+
+.reasonContainer {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.reasonBox {
+    margin-top: 15px;
+    padding: 15px;
+    width: 20vw;
+    height: 300px;
+    gap: 10px;
+    background: linear-gradient(to right bottom, rgb(35, 36, 63), rgb(36, 19, 38));
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+.reasonContent p {
+    font-size: 1.11rem;
+}
+
+.reasonLogo {
+    padding: 65px 8px;
+    text-align: right;
+}
+
+
+
+/* FAQ container */
+
+.faqContainer {
+    width: 87vw;
+    min-height: 380px;
+    margin: auto;
+}
+
+.questionBox {
+    margin-top: 10px;
+    background-color: #2d2d2d;
+    transition: background-color 0.3s ease;
+}
+
+.faq {
+    display: flex;
+    align-items: center;
+    padding: 20px 22px;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.questionBox:hover {
+    background-color: #444444;
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #2d2d2d;
+    color: white;
+    padding: 0 22px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    border-top: 1px solid #444;
+    transition: max-height 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), padding 0.2s ease;
+    text-align: justify
+
+}
+
+.questionBox.active .answer {
+    max-height: 600px;
+    /* bigger for long answers */
+    padding: 20px 22px;
+}
+
+.questionBox.active .faq img {
+    content: url("./assets/svg/close.svg");
+    /* make sure you have a close (×) icon */
+    transition: transform 0.5s ease;
+}
+
+.questionBox .faq img {
+    transition: transform 0.3s ease;
+}
+
+
+
+/* Footer */
+
+.footer {
+    width: 80vw;
+    height: 800px;
+    margin: 30px auto;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.queryBox {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    text-decoration: underline;
+}
+
+.queryBox>p {
+    cursor: pointer;
+}
+
+.footerText {
+    display: flex;
+    height: 200px;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.footerText a {
+    color: white;
+}
+
+.footerText a:link {
+    color: white;
+}
+
+.footerText a:active {
+    color: white;
+}
+
+.footerText a:visited {
+    color: gold;
+}
+
+
+
+
+@media screen and (max-width: 1440px) {
+    .content {
+        height: 400px;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .navbar>img {
+        width: 100px;
+    }
+
+    .headings {
+        height: 180px;
+    }
+
+    .content h1 {
+        font-size: 50px;
+    }
+
+    .emailbox p {
+        font-size: 1rem;
+    }
+
+    .emailbox input {
+        width: 300px;
+    }
+
+    .reasonContainer {
+        /* padding: 10px; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .reasonBox {
+        padding: 25px;
+        width: 80vw;
+        height: 250px;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+    .headings{
+        height: 130px;
+    }
+    .content {
+        height: 350px;
+    }
+    .content h1{
+        font-size: 34px;
+    }
+
+    .emailbox input{
+        width: 250px;
+        height: 30px;
+        font-size: 18px;
+    }
+
+    .stButton{
+        width: 120px;
+        height: 30px;
+        font-size: 18px;
+    }
+    .stButton img{
+        width: 8px;
+        margin: -3px 8px;   
+    }
+
+    .queryBox>p{
+        font-size: 14px;
+    }
+}
+
+
+@media screen and (max-width: 425px){
+
+    .navbar >img{
+        width: 65px;    
+    }
+
+    .btn{
+        width: 100px;
+        font-size: 10px;
+    }
+
+    .btn-sign{
+        width: 60px;
+        font-size: 12px;
+    }
+    .headings{
+        height: 140px;
+    }
+    .content{
+        height: 350px;
+    }
+    .content h1{
+        font-size: 22px;
+    }
+    .content p{
+        font-size: 14px;    
+    }
+
+    .emailbox{
+        height: 80px;  
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+    }
+    .emailbox input{
+        font-size: 14px;
+    }
+
+    .stButton{
+        margin-top: 10px;
+    }
+
+    .trending li img{
+        width: 200px;
+    }
+
+    .reason{
+        padding: 10px;
+    }
+
+    .reasonLogo{
+        margin-top: -20px;
+        padding: 40px 4px;
+    }
+    .reasonContent p{
+        font-size: 16px;
+    }
+    .reasonContent h2{
+        font-size: 22px;
+    }
+
+    .reasonLogo img{
+        width: 60px;
+    }
+
+    .footer{
+        height: 900px;
+    }
+
+    .faq{
+        font-size: 20px; 
+    }
+
+    .queryBox{
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media screen and (max-width: 320px){
+
+    .slider{
+        height: 300px;
+    }
+
+    .trending li img{
+        width: 180px;
+    }
+
+    .trending li::before{
+        font-size: 60px;
+    }
+
+    .reasonContent h2{
+        font-size: 18px;
+    }
+    .reasonContent p{
+        font-size: 14px;
+    }
+
+    .reasonLogo{
+        padding: 60px 4px;
+    }
+
+    .faqContainer h2{
+        margin-top: 30px;
+    }
+
+    .faq{
+        font-size: 16px;
+    }
+    .faq img{
+        width: 20px;
+    }
+
+    .answer{
+        font-size: 14px;
+    }
+    .footer{
+        height: 1000px;
+    }
+
+    .footer>div:nth-child(2){
+        margin-top: 100px;
+    }
+
+    .queryBox{
+        grid-template-columns: 1fr;
+        margin-bottom: 20px;
+    }
+}
